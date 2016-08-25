@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=GUESS
+comment0.text=\n\ A\ guessing\ game\n
+comment1.params=
+comment1.target=GUESS()
+comment1.text=\n\ sets\ player\ name\ not\ null\n
+comment2.params=
+comment2.target=void\ display_message()
+comment2.text=\n\ simple\ welcome\n
+comment3.params=
+comment3.target=void\ play_game()
+comment3.text=\n\ \n
+comment4.params=
+comment4.target=void\ show_result()
+comment4.text=\n\ \n
+numComments=5

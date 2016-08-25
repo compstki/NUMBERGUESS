@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="GUESS" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">A guessing game</javadoc>
+    <imports>
+        <import target="javax.swing.*" enable="true"/>
+        <import target="java.util.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="private" type="String" type-java="String" name="playerName" enable="true"/>
+        <variable access="private" type="String" type-java="String" name="gameChoice" enable="true"/>
+        <variable access="private" type="int" type-java="int" name="randomNumber" enable="true"/>
+        <variable access="private" type="int" type-java="int" name="guess" enable="true"/>
+        <variable access="protected" type="Random" type-java="Random" name="randomGenerator" value="new Random ( )" value-java="new Random ( )" enable="true"/>
+    </fields>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">sets player name not null</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <assign dest="playerName" dest-java="playerName" src="&quot;&quot;" src-java="&quot;&quot;" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="display_message" enable="true">
+            <javadoc xml:space="preserve">simple welcome</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="System . out . println ( &quot;Welcome to the Guessing game&quot; )" expression-java="System . out . println ( &quot;Welcome to the Guessing game&quot; )" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="play_game" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <comment xml:space="preserve">3.1       Display Menu</comment>
+                <call expression="System . out . println ( &quot;Enter P for play and S for stop&quot; )" expression-java="System . out . println ( &quot;Enter P for play and S for stop&quot; )" enable="true"/>
+                <assign dest="gameChoice" dest-java="gameChoice" src="JOptionPane . showInputDialog ( &quot;Enter choice now&quot; )" src-java="JOptionPane . showInputDialog ( &quot;Enter choice now&quot; )" enable="true"/>
+                <comment xml:space="preserve">3.2       If option is equal to play then</comment>
+                <if condition="gameChoice . equals ( &quot;P&quot; )" condition-java="gameChoice . equals ( &quot;P&quot; )" enable="true">
+                    <ifStatements>
+                        <comment xml:space="preserve">3.3                   Enter player name 3.4                   Generate random number 3.4.1   Computer generates a number between 1 and 50</comment>
+                        <variable type="int" type-java="int" name="randomNumber" value="randomGenerator . nextInt ( 50 ) + 1" value-java="randomGenerator . nextInt ( 50 ) + 1" enable="true"/>
+                        <comment xml:space="preserve">3.5                   While found equals false do 3.6                             enter lucky guess from player 3.7                             if guess equals random number then 3.8                                         set found to true 3.9                             else if guess is less than random number then 3.10                                        display a less than message 3.11                            else 3.12                                        display a more than message 3.13                            end if 3.14                end while 3.15                Display results 3.16    else</comment>
+                    </ifStatements>
+                    <else>
+                        <comment xml:space="preserve">3.17                quit game 3.18    end if</comment>
+                    </else>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="show_result" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+    </methods>
+</class>
